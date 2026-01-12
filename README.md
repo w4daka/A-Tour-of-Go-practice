@@ -58,6 +58,7 @@ Hello_world.go(5, 6): other declaration of main
 ```
 
 という警告が出た。これは一つのディレクトリは一つのパッケージとして扱うからである解決するにはディレクトリ構成をのようにすればよい。やる。
+
 ```
 welcome/
 ├── hello/
