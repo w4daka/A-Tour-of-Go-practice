@@ -101,3 +101,30 @@ x int, y int
 x, y int
 ```
 と書くことができる。
+
+#### Multiple results
+
+Goの関数は複数の戻り値を返すことができる。
+このときのコードの`a, b =swap("hello", "world")`という行の`:=`がわからなかった。この`:=`はGo言語における**短縮変数宣言(Short Variable Declearation)**である。
+
+これは以下二つの役割を同時にはたしている。
+
+
+1. **変数の宣言**:新しい変数`a`と`b`を作成する
+
+2. **初期化**:右辺の`swap("hello", "world)`の戻り値を左辺の変数に代入する
+
+**`var`を使った場合との比較**
+
+```go
+var a, b string = swap("hello", "world")
+```
+
+または
+
+```go
+var a, b string
+a, b = swap("hello", "world")
+```
+
+よって、`:=`を使うことで`var`キーワードや型の記述を省略できるというメリットがある。
